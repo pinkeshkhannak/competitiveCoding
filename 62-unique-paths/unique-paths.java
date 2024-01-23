@@ -8,11 +8,11 @@ class Solution {
         int up = 0;
 
         if(m > 0) {
-            dp[m][n] = up =  PathCount(m-1,n,dp);
+            up =  PathCount(m-1,n,dp);
         }
         int left = 0;
         if(n > 0) {
-           dp[m][n] = left = PathCount(m,n-1,dp);
+            left = PathCount(m,n-1,dp);
         }
         return dp[m][n] = up + left;
     }
